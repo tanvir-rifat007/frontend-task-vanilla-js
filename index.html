@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail - Smart Watch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="product-container">
+        <figure class="product-image">
+          <img
+            id="product-image"
+            src="./images/img1.jpeg"
+            alt="Classy Modern Smart Watch"
+          />
+        </figure>
+
+        <!-- Product Details -->
+        <article class="product-details">
+          <h1>Classy Modern Smart Watch</h1>
+
+          <section class="reviews">
+            <p>⭐⭐⭐⭐⭐ (2 Reviews)</p>
+          </section>
+
+          <section class="price">
+            <p>
+              <del>$99.00</del>
+              <strong>$79.00</strong>
+            </p>
+          </section>
+
+          <section class="description">
+            <p>
+              I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain was born, and I will give you a
+              complete account of the system.
+            </p>
+          </section>
+
+          <section class="product-options">
+            <div>
+              <h3>Band Color</h3>
+              <ul id="color-options" class="color-options"></ul>
+            </div>
+
+            <div>
+              <h3>Wrist Size</h3>
+              <ul id="size-options" class="size-options"></ul>
+            </div>
+          </section>
+
+          <section class="cart-controls">
+            <div class="quantity-control">
+              <button id="decrease-quantity" aria-label="Decrease quantity">
+                -
+              </button>
+              <input
+                id="quantity"
+                type="number"
+                value="0"
+                min="0"
+                aria-label="Quantity"
+              />
+              <button id="increase-quantity" aria-label="Increase quantity">
+                +
+              </button>
+            </div>
+            <button id="add-to-cart" class="add-to-cart">Add to Cart</button>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <!-- Checkout -->
+    <footer>
+      <button id="checkout" disabled>
+        Checkout <span id="cart-count">0</span>
+      </button>
+    </footer>
+
+    <!-- Modal -->
+
+    <div id="modal" style="display: none">
+      <div class="modal-content">
+        <span id="close-modal" style="cursor: pointer">&times;</span>
+        <section class="cart">
+          <h2>Your Cart</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Item</th>
+                <th>Color</th>
+                <th>Size</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4" style="text-align: right">Total</td>
+                <td id="total-quantity">0</td>
+                <td id="total-price">$0.00</td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <div class="cart-actions">
+            <button type="button">Continue Shopping</button>
+            <button type="button" class="checkout">Checkout</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
