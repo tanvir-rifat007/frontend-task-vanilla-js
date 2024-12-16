@@ -1,6 +1,5 @@
 globalThis.addEventListener("DOMContentLoaded", () => {
   initializeProduct();
-  console.log(vitest);
 });
 
 const PRODUCT = {
