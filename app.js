@@ -169,13 +169,13 @@ function renderCartItems() {
 function getImageForColor(color) {
   switch (color) {
     case "Purple":
-      return "/assets/images/img1.jpeg";
+      return "./assets/images/img1.jpeg";
     case "Black":
-      return "/assets/images/img2.jpeg";
+      return "./assets/images/img2.jpeg";
     case "Blue":
-      return "/assets/images/img3.jpeg";
+      return "./assets/images/img3.jpeg";
     case "Cyan":
-      return "/assets/images/img4.jpeg";
+      return "./assets/images/img4.jpeg";
     default:
       return "";
   }
